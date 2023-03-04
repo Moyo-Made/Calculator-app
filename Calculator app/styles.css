@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body{
+    background-image: url("https://media.istockphoto.com/id/1237986300/vector/financial-success-seamless-pattern-track-expenses-budget-emergency-fund-credit-card-home.jpg?s=612x612&w=0&k=20&c=iTn8IBv4ukSA4En-rYeo0UD6B5CvhF4VFbm7Yp3UL6g=");
+}
+
+.app{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.calculator{
+    background-color: rgb(7, 5, 55);
+    width: 100%;
+    max-width: 370px;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 29px;
+    overflow: hidden;
+}
+
+.display{
+    min-height: 180px;
+    padding: 29px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    color: white;
+    text-align: right;
+    flex: 1 1 0%;
+}
+
+.display .input{
+    font-size: 25px;
+    margin-bottom: 8px;
+}
+
+.display .output{
+    font-size: 35px;
+    font-weight: 700;
+    width: 100%;
+    max-width: 100%;
+    overflow: auto;
+}
+
+.display .operator{
+    color: rgb(240, 138, 12);
+}
+
+.display .brackets,
+.display .percent{
+    color: aqua;
+}
+
+.keys{
+    background-color: rgb(57, 54, 143);
+    padding: 24px;
+    border-radius: 24px 24px 0 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-gap: 16px;
+    box-shadow: 0 -2px 16px rgba(104, 91, 221, 0.2);
+}
+
+.keys .key{
+    position: relative;
+    cursor: pointer;
+
+    display: block;
+    height: 0;
+    padding-top: 70%;
+    background-color: rgb(32, 32, 190);
+    border-radius: 16px;
+    transition: 0.2;
+    user-select: none;
+}
+
+.keys .key:hover{
+    box-shadow: inset 0px 0px 8px rgb(50, 50, 244); ;
+}
+
+.keys .key span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 32px;
+    font-weight: 700;
+    color: white;
+}
+
+.keys .key.operator span{
+   color:  rgb(253, 118, 91);
+}
+
+.keys .key.action span{
+    color: rgb(95, 160, 224);
+}
+
+.keys .key.percent span{
+    color: rgb(95, 160, 224);
+}
